@@ -1,5 +1,6 @@
-var app = angular.module("FactoryTest",[])
+angular.module("FactoryTest",[])
 .factory("useFactory", function(){
+	var check = false;
 	var meineListe = [];
 	return {
 		values : function(){
@@ -19,3 +20,4 @@ var app = angular.module("FactoryTest",[])
 .controller('showValuesController', ['$scope', 'useFactory', function($scope, useFactory ){
 	$scope.values = useFactory.values;
 }]);
+

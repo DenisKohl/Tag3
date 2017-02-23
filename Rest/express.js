@@ -11,7 +11,7 @@ app.get('/json', function (req, res) {
 		json = JSON.stringify(obj);
 		res.set("Content-Type", "application/json");
 		res.send(json);
-	},5000);
+	},2000);
 	
 });
 

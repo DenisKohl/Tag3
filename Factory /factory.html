@@ -9,7 +9,7 @@
 		<button ng-click="addValue()";>save</button>
 	</form>
 	<ul ng-controller="showValuesController">
-		<li ng-repeat="v in values()">{{v}}</li>
+		<li ng-repeat="v in values() track by $index">{{v}}</li>
 	</ul>
 </body>
 </html>

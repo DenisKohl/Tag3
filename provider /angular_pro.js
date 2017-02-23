@@ -50,10 +50,11 @@ angular.module('myConfApp',[])
 
 		}
 	}
-}).config(function(hostServiceProvider){
-	hostServiceProvider.init("WebServer", "80.154.193.223"); //Ganz wichtig... Provider werden immer mit dem Wort Provider ergänzt
 })
 .controller("HostCtrl",["$scope", "hostService", function($scope, hostService){
+	console.log(hostService);
 	$scope.hostip  = hostService.serverip;
 	$scope.hostname  = hostService.servername;
-}]);
+}]).config(function(hostServiceProvider){
+	hostServiceProvider.init("WebServer", "80.154.193.223"); //Ganz wichtig... Provider werden immer mit dem Wort Provider ergänzt
+});
