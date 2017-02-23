@@ -1,0 +1,21 @@
+<html ng-app="AufMod">
+<head>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="angularauf.js"></script>
+</head>
+<body>
+	<div ng-controller="httpCtrl">
+	<div ng-controller="eingabeEins">
+		<input type="text" ng-model="val">
+		<button ng-click="addVal()";>save</button>
+	</div>
+	<div ng-controller="eingabeZwei">
+		<input type="text" ng-model="val">
+		<button ng-click="addVal()";>save</button>
+	</div>
+	<div ng-controller="ausgabe">
+		<li ng-repeat="v in liste() track by $index">{{v}}</li>
+	</div>
+	</div>
+</body>
+</html>
