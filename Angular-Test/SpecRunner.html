@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.4.1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+
+  <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+  <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.4.1/boot.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="./angular_project.js"> </script>
+  
+  
+
+</head>
+
+<body>
+	<script>
+	describe("myCtrl test", function(){
+			beforeEach(module("myApp"));
+			var $controller;
+			beforeEach(inject(function(_$controller_){
+			  $controller = _$controller_;
+			}));
+			describe("myCtrl", function(){
+				it("existens Test", function(){
+					var $scope = {};
+					var controller = $controller('myCtrl', { $scope: $scope });
+					expect($scope.name).not.toBeUndefined();
+				});
+				it("Hans Test", function(){
+					var $scope = {};
+					var controller = $controller('myCtrl', { $scope: $scope });
+					expect($scope.name).toEqual("Hans");
+				});
+			});
+	});
+  	
+	</script>
+</body>
+</html>
